@@ -1,0 +1,25 @@
+{
+  "name": "AI Image Generator",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "postCreateCommand": "npm install && npx convex dev --once",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "ports": [
+    {
+      "label": "Frontend",
+      "port": 5173,
+      "onAutoForward": "openPreview"
+    },
+    {
+      "label": "Convex Backend",
+      "port": 3000,
+      "onAutoForward": "notify"
+    }
+  ]
+}
